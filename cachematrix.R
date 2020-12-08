@@ -1,7 +1,3 @@
-## Put comments here that give an overall description of what your
-## functions do
-
-## Write a short comment describing this function
 makeCacheMatrix <- function(x = matrix(sample(1:100,9),3,3)) {
   s <- NULL
   set <- function(y) {
@@ -15,8 +11,6 @@ makeCacheMatrix <- function(x = matrix(sample(1:100,9),3,3)) {
        setsolve = setsolve,
        getsolve = getsolve)
 }
-##
-## Same here, changed "mean" to "solve" and "m" to "s"
 cacheSolve <- function(x, ...) {
   s <- x$getsolve()
   if(!is.null(s)) {
@@ -29,7 +23,6 @@ cacheSolve <- function(x, ...) {
   s
 }
 cacheSolve <- function(x, ...) {
-  ## Return a matrix that is the inverse of 'x'
   inv <- x$getinv()
   if(!is.null(inv)) {
     message("getting cached result")
@@ -55,7 +48,6 @@ makeCacheMatrix <- function(x = matrix()) {
        getInverse = getInverse)
 }
 cacheSolve <- function(x, ...) {
-  ## Return a matrix that is the inverse of 'x'
   inv <- x$getInverse()
   if (!is.null(inv)) {
     message("getting cached data")
